@@ -37,7 +37,7 @@ if st.button('합불분류'):
         p = model.predict(input_data)      # model이 분류한 값을 p에 저장한다
         if p[0] == 1 :
               st.success('만족')
-        if p[0]==0:
+        if p[1]==0:
               st.success('그럭저럭')
         else:
               st.success('불만족')
