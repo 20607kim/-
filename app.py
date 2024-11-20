@@ -37,5 +37,7 @@ if st.button('합불분류'):
         p = model.predict(input_data) 
         if p[0] == 1 :
               st.success('만족')
+        if p[0] == 0 :
+              st.success('그럭저럭')
         else:
               st.success('불만족')
