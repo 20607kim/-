@@ -32,3 +32,12 @@ st.write('****당신이 사용할 비용을 입력하세. 만족도를 예상해
 
 a = st.number_input('금액입력', value=0)
 
+if st.button('합불분류'):
+ input_data = [[ a ]]          # 사용자가 입력한 a,b,c 를 input_data에 저장하고
+        p = model.predict(input_data)      # model이 분류한 값을 p에 저장한다
+        if p[0] == 1 :
+              st.success('만족')
+        if p[0]==0:
+              st.success('그럭저럭')
+        else:
+              st.success('불만족')
