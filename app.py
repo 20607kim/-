@@ -30,7 +30,7 @@ with col3:
 st.subheader('모델 활용')
 st.write('****당신이 사용할 비용을 입력하세. 만족도를 예상해 드립니다')
 
-a = st.number_input('금액입력', value=0.0)
+a = st.number_input('금액입력($)', value=0.0)
 
 if st.button('만족도분류'):
         input_data = [[ a ]]
